@@ -1,3 +1,17 @@
+## Solution
+
+1. dApp users get certain specified voting rights for their accounts
+
+<!-- 2. Users create unique secret as secret = hash(address,salt1) and publish account_hash = hash(secret, salt2) at the smart contract. Also, users publish snark proof, that the computation is correct. This procedure can be executed only once for each account with voting rights. -->
+
+<!-- 3. Users can anonymously not exclusively delegate their voting rights to another account, publishing a snark with multiple existed account_hash public input, new account_hash public output (corresponding to the same secret, but another salt) and private selector of one of the inputted accounts. -->
+
+<!-- 4. Users publish encrypted via counters private key message = {voting_vector, secret} and snark proof that message is correct and encryption is correct. -->
+
+<!-- 5. After the end of voting counters MapReduce all messages from last to first via snarks without publishing any subtotals. If the secret is new, we increment subtotal vector and add the secret to set of known secrets during the counting (how to do it is described here ). If the secret is not new, we pass the addition and just update the state's salt to hide from others that the secret is not new here. -->
+
+<!-- 6. After the end of the counting, the resulting vector is published with proof. -->
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
